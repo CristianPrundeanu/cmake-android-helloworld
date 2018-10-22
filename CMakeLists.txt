@@ -23,18 +23,6 @@ set(ANDROID_STL c++_static)
 
 set(ANDROID_NATIVE_API_LEVEL 24)
 
-#set(ANDROID_TOOLCHAIN clang)
-set(ANDROID_TOOLCHAIN gcc)
-
-# this only has effect from the command line (or possibly from a toolchain file)
-##set(ANDROID_ABI armeabi-v7a)
-##set(ANDROID_ABI x86)
-##set(ANDROID_ABI x86_64)
-##set(ANDROID_ABI arm64-v8a)
-##set(ANDROID_ABI mips) # unsupported as of NDK r17
-#set(CMAKE_ANDROID_ABI x86_64)
-#set(CMAKE_ANDROID_ARCH_ABI x86_64)
-
 # Android 5.0+ only support position-independent executables
 add_definitions("-fPIE")
 set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -fPIE -pie")
