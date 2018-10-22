@@ -9,5 +9,8 @@ build: configure
 deploy: build
 	cd build && "$(ANDROID_HOME)/platform-tools/adb" push my-native /data/local/tmp/
 
+run: deploy
+	"$(ANDROID_HOME)/platform-tools/adb" shell /data/local/tmp/my-native
+
 distclean:
 	rm -rf build

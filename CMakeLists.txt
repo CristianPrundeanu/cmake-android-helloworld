@@ -59,7 +59,7 @@ set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -fPIE -pie")
 # source files, you can use the add_executable() command to tell CMake 
 # to instead create an executable from those source files.
 
-add_executable(my-native main.c)
+add_executable(my-native main.cpp)
 
 # Specifies a path to native header files.
 #include_directories(src/main/cpp/include/)
