@@ -24,8 +24,8 @@ set(ANDROID_STL c++_static)
 set(ANDROID_NATIVE_API_LEVEL 24)
 
 # Android 5.0+ only support position-independent executables
-add_definitions("-fPIE")
-set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -fPIE -pie")
+add_definitions("-fPIE -pthread")
+set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -fPIE -pie -pthread")
 
 # Specifies a library name, specifies whether the library is STATIC or
 # SHARED, and provides relative paths to the source code. You can
